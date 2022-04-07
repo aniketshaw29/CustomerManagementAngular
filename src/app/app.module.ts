@@ -3,14 +3,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomerListComponent } from './customer-list/customer-list.component';
+import {HttpClientModule} from "@angular/common/http";
+import { CreateCustomerComponent } from './create-customer/create-customer.component';
+import {FormsModule} from "@angular/forms";
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { GetIdDeleteComponent } from './get-id-delete/get-id-delete.component';
+import { GetIdUpdateComponent } from './get-id-update/get-id-update.component';
+import { GetEmailComponent } from './get-email/get-email.component';
+import { GetIdFindComponent } from './get-id-find/get-id-find.component';
+import { DisplayByIdComponent } from './display-by-id/display-by-id.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomerListComponent,
+    CreateCustomerComponent,
+    UpdateCustomerComponent,
+    HomePageComponent,
+    GetIdDeleteComponent,
+    GetIdUpdateComponent,
+    GetEmailComponent,
+    GetIdFindComponent,
+    DisplayByIdComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
