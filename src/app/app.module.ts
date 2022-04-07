@@ -14,6 +14,7 @@ import { GetIdUpdateComponent } from './get-id-update/get-id-update.component';
 import { GetEmailComponent } from './get-email/get-email.component';
 import { GetIdFindComponent } from './get-id-find/get-id-find.component';
 import { DisplayByIdComponent } from './display-by-id/display-by-id.component';
+import { DisplayByEmailComponent } from './display-by-email/display-by-email.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DisplayByIdComponent } from './display-by-id/display-by-id.component';
     GetIdUpdateComponent,
     GetEmailComponent,
     GetIdFindComponent,
-    DisplayByIdComponent
+    DisplayByIdComponent,
+    DisplayByEmailComponent
   ],
   imports: [
     BrowserModule,

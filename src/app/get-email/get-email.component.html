@@ -1,7 +1,9 @@
 <div class="col-md-6 offset-md-3">
-  <h3>Enter the Email ID for Customer search</h3>
   <br>
-  <form (ngSubmit)="displayCustomer()">
+  <br>
+  <h3>Enter the Email ID for Customer search: </h3>
+  <br>
+  <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label>Email ID: </label>
       <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">

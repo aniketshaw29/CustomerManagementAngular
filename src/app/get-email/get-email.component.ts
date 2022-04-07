@@ -10,18 +10,11 @@ import {CustomerService} from "../customer.service";
 })
 export class GetEmailComponent implements OnInit {
   email: string;
-  customer: Customer;
-  constructor(private customerService: CustomerService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  displayCustomer(){
-    this.email = this.route.snapshot.params['email'];
-    this.customerService.getCustomerByEmail(this.email).subscribe(data=>{
-        this.customer=data;
-      },
-      error => console.log(error)
-    );
-    this.router.navigate(['displaySearchResult',this.customer]);
+  onSubmit(){
+    this.router.navigate(['displayByID',this.email]);
   }
 }

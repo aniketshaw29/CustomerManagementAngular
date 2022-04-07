@@ -9,6 +9,7 @@ import {GetIdDeleteComponent} from "./get-id-delete/get-id-delete.component";
 import {GetEmailComponent} from "./get-email/get-email.component";
 import {GetIdFindComponent} from "./get-id-find/get-id-find.component";
 import {DisplayByIdComponent} from "./display-by-id/display-by-id.component";
+import {DisplayByEmailComponent} from "./display-by-email/display-by-email.component";
 
 const routes: Routes = [
   {path: 'customers', component: CustomerListComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'getEmail', component: GetEmailComponent},
   {path: 'getID', component: GetIdFindComponent},
   {path: 'displayByID/:id', component: DisplayByIdComponent},
+  {path: 'displayByID/:email', component: DisplayByEmailComponent},
   {path: '', redirectTo: 'homepage', pathMatch: 'full'}
 ];
 

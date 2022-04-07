@@ -22,9 +22,6 @@ export class CustomerService {
   createCustomer(customer: Customer): Observable<Object>{
     return this.HttpClient.post(`${this.createCustomerURL}`, customer);
   }
-  getCustomerById(id: number): Observable<Customer> {
-    return this.HttpClient.get<Customer>(`${this.getCustomerbyIdURL}/${id}`);
-  }
   updateCustomer(id: number, customer:Customer): Observable<Object>{
     return this.HttpClient.put(`${this.updateCustomerURL}/${id}`, customer);
   }
@@ -34,16 +31,10 @@ export class CustomerService {
   deleteALLCustomer(): Observable<Object>{
       return this.HttpClient.delete(`${this.deleteAllCustomerURL}`);
   }
-
-
-
-
-
-  //error
-  // getCustomerByEmail(email: string): Observable<Customer> {
-  //   return this.HttpClient.get<Customer>(`${this.getCustomerbyEmailURL}`,email);
-  // }
+  getCustomerById(id: number): Observable<Customer> {
+    return this.HttpClient.get<Customer>(`${this.getCustomerbyIdURL}/${id}`);
+  }
   getCustomerByEmail(email: string): Observable<Customer> {
-    return this.HttpClient.get<Customer>(`${this.getCustomerbyEmailURL}`);
+    return this.HttpClient.get<Customer>(`${this.getCustomerbyEmailURL}/${email}`);
   }
 }
