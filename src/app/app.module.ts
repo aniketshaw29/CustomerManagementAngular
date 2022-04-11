@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CreateCustomerComponent } from './create-customer/create-customer.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { GetIdDeleteComponent } from './get-id-delete/get-id-delete.component';
@@ -30,12 +30,13 @@ import { DisplayByEmailComponent } from './display-by-email/display-by-email.com
     DisplayByIdComponent,
     DisplayByEmailComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
