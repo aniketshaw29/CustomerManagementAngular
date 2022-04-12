@@ -7,13 +7,13 @@ import { Customer } from "./customer";
   providedIn: 'root'
 })
 export class CustomerService {
-  private getAllCustomersURL = "http://localhost:9999/api/v1/getAllCustomers";
-  private createCustomerURL = "http://localhost:9999/api/v1/createCustomer";
-  private getCustomerbyIdURL = "http://localhost:9999/api/v1/getCustomer";
-  private updateCustomerURL = "http://localhost:9999/api/v1/updateCustomer";
-  private deleteCustomerURL = "http://localhost:9999/api/v1/deleteCustomer";
-  private deleteAllCustomerURL = "http://localhost:9999/api/v1/deleteAllCustomer";
-  private getCustomerbyEmailURL = "http://localhost:9999/api/v1/findByEmail";
+  private getAllCustomersURL = "https://customer-management-2022.herokuapp.com/api/v1/getAllCustomers";
+  private createCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/createCustomer";
+  private getCustomerbyIdURL = "https://customer-management-2022.herokuapp.com/api/v1/getCustomer";
+  private updateCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/updateCustomer";
+  private deleteCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/deleteCustomer";
+  private deleteAllCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/deleteAllCustomer";
+  private getCustomerbyEmailURL = "https://customer-management-2022.herokuapp.com/api/v1/findByEmail";
 
     constructor(private HttpClient: HttpClient) { }
   getCustomerList(): Observable<Customer[]>{
