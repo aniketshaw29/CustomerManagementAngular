@@ -2,18 +2,22 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import { Customer } from "./customer";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
-  private getAllCustomersURL = "https://customer-management-2022.herokuapp.com/api/v1/getAllCustomers";
-  private createCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/createCustomer";
-  private getCustomerbyIdURL = "https://customer-management-2022.herokuapp.com/api/v1/getCustomer";
-  private updateCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/updateCustomer";
-  private deleteCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/deleteCustomer";
-  private deleteAllCustomerURL = "https://customer-management-2022.herokuapp.com/api/v1/deleteAllCustomer";
-  private getCustomerbyEmailURL = "https://customer-management-2022.herokuapp.com/api/v1/findByEmail";
+
+   baseUrl= environment.baseUrl;
+
+  private getAllCustomersURL = this.baseUrl+"api/v1/getAllCustomers";
+  private createCustomerURL = this.baseUrl+"api/v1/createCustomer";
+  private getCustomerbyIdURL = this.baseUrl+"api/v1/getCustomer";
+  private updateCustomerURL = this.baseUrl+"api/v1/updateCustomer";
+  private deleteCustomerURL = this.baseUrl+"api/v1/deleteCustomer";
+  private deleteAllCustomerURL = this.baseUrl+"api/v1/deleteAllCustomer";
+  private getCustomerbyEmailURL = this.baseUrl+"api/v1/findByEmail";
 
     constructor(private HttpClient: HttpClient) { }
   getCustomerList(): Observable<Customer[]>{
